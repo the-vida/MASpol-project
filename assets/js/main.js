@@ -80,10 +80,44 @@
             $('.time-countdown').each(function() {
             var $this = $(this), finalDate = $(this).data('countdown');
             $this.countdown(finalDate, function(event) {
-                var $this = $(this).html(event.strftime('' + '<div class="counter-column"><div class="inner"><span class="count">%D</span>Days</div></div> ' + '<div class="counter-column"><div class="inner"><span class="count">%H</span>Hours</div></div>  ' + '<div class="counter-column"><div class="inner"><span class="count">%M</span>Mins</div></div>  ' + '<div class="counter-column"><div class="inner"><span class="count">%S</span>Secs</div></div>'));
+                var $this = $(this).html(event.strftime('' + '<div class="counter-column"><div class="inner"><span class="count">%D</span>Dny</div></div> ' + '<div class="counter-column"><div class="inner"><span class="count">%H</span>Hodiny</div></div>  ' + '<div class="counter-column"><div class="inner"><span class="count">%M</span>Minuty</div></div>  ' + '<div class="counter-column"><div class="inner"><span class="count">%S</span>Sekundy</div></div>'));
             });
          });
         }
+
+        
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        
+        darkModeToggle.addEventListener('click', () => {
+          document.body.classList.toggle('dark-mode');
+        })
+        const toggle = document.getElementById('dark-mode-toggle');
+
+toggle.addEventListener('click', () => {
+  localStorage.removeItem('darkMode');
+  
+  if (toggle.dataset.state === 'light') {
+    toggle.dataset.state = 'dark';
+    toggle.innerText = "Světlý Režim";
+    document.body.classList.add('dark-mode');
+    localStorage.setItem('darkMode', true);
+  } else {
+    toggle.dataset.state = 'light'; 
+    toggle.innerText = "Tmavý Režim";
+    document.body.classList.remove('dark-mode'); 
+    localStorage.setItem('darkMode', false);   
+  }
+});
+
+if(localStorage.getItem('darkMode') === 'true') {
+  toggle.dataset.state = 'dark';  
+  toggle.innerText = "Světlý Režim";   
+  document.body.classList.add('dark-mode');
+} else {
+  toggle.dataset.state = 'light';
+  toggle.innerText = "Tmavý Režim"; 
+};
+
 
         // projects filters isotop
         $(".product-filters li").on('click', function () {

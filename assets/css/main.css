@@ -40,6 +40,7 @@ a {
   transition: all 0.2s ease-in-out;
 }
 
+
 a:hover {
   color: #238ef2;
   text-decoration: none;
@@ -175,6 +176,9 @@ p:last-child {
   background: #fff;
   overflow-x: hidden;
 }
+.dark-mode .loader {
+  background-color: #000;
+}
 
 .loader-inner {
   position: absolute;
@@ -188,6 +192,11 @@ p:last-child {
   width: 50px;
 }
 
+.dark-mode .circle {
+  width: 8vmax;
+  height: 8vmax;
+  border-right: 4px solid #fff;
+  }
 .circle {
   width: 8vmax;
   height: 8vmax;
@@ -231,6 +240,9 @@ p:last-child {
   border-right: 2px solid #000;
   -webkit-animation: none;
   animation: none;
+}
+.dark-mode .circle:after {
+  border-right: 2px solid #FFFFFF;
 }
 
 @-webkit-keyframes spinLeft {
@@ -397,6 +409,93 @@ p:last-child {
   }
 }
 
+.dark-mode {
+  color: whitesmoke;
+  background-color: #000000;
+}
+
+.dark-mode a {
+  color: #237DD1DC; 
+}
+
+.dark-mode button {
+  background-color: #353535;
+}
+
+
+/* Default light styles */
+body {
+  background-color: #F2F2F2; 
+}
+
+/* Dark mode styles */  
+.dark-mode {
+  background-color: #000000;
+}
+.dark-mode h1,  
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode p,
+.dark-mode a {
+  color: #FFFFFF;
+}
+
+.dark-mode .link:active {
+  color: #237DD1DC;
+}
+
+.dark-mode .link {
+  color: #238ef2;
+}
+
+.dark-mode h4 {
+  color: #238ef2;
+}
+
+.dark-mode a:hover {
+  color: #238ef2;  
+}
+
+.dark-mode .cart-btn {
+  border-color: #FFFFFF;   
+}
+
+.dark-mode .orange-text {
+  color: #238ef2 !important;  
+} 
+
+/* Apply dark mode styles to sections */
+.dark-mode .list-section,
+.dark-mode .homepage-slider,
+.dark-mode .product-section  {
+   background-color: #0C0C0C;
+} 
+
+.dark-mode .cart-banner {
+  background-color: #212121;
+}
+
+.dark-mode .main-menu ul li a {
+  color: #FFFFFF;
+  font-weight: 700;
+  display: block;
+  padding: 15px;
+}
+
+.dark-mode .boxed-btn:hover {  
+  color: #238ef2;  
+  background-color: #051922;  
+}
+
+.dark-mode .bordered-btn {  
+  color: #FFFFFF;  
+}
+
+ul.sub-menu li:hover a {
+  color: #238ef2;
+}
+
+
 .gray-bg {
   background-color: #f5f5f5;
 }
@@ -435,6 +534,10 @@ a.read-more-btn {
   font-weight: 700;
 }
 
+.dark-mode .read-more-btn {
+  color: #EEEEEE;
+}
+
 a.read-more-btn:hover {
   color: #238ef2;
 }
@@ -466,6 +569,15 @@ a.boxed-btn, a.bordered-btn, a.cart-btn {
   width: 530px;
   margin: 0 auto;
   color: #555;
+  margin-top: 10px;
+  line-height: 1.8;
+}
+
+.dark-mode .section-title p {
+  font-size: 15px;
+  width: 530px;
+  margin: 0 auto;
+  color: #e9e9e9;
   margin-top: 10px;
   line-height: 1.8;
 }
@@ -521,7 +633,7 @@ a.boxed-btn, a.bordered-btn, a.cart-btn {
 
 ----------------------------------------------------------------------------- */
 ul.navbar-nav li.nav-item a.nav-link, ul.navbar-nav li.nav-item.active a.nav-link {
-  color: #051922;
+  color: #1F1F1F;
 }
 
 .top-header-area {
@@ -561,14 +673,23 @@ nav.main-menu ul li a {
   display: block;
   padding: 15px;
 }
+.dark-mode.main-menu ul li a {
+  color: #DA186F;
+}
 
 nav.main-menu ul > li {
   position: relative;
 }
 
+.dark-mode .main-menu ul ul.sub-menu {
+  background-color: #121212;
+  -webkit-box-shadow: 0 0 20px #757575;
+  box-shadow: 0 0 20px #313131;
+}
+
 nav.main-menu ul ul.sub-menu {
   position: absolute;
-  background-color: #fff;
+  background-color: #D3D3D3;
   width: 220px;
   padding: 15px 15px;
   margin: 0;
@@ -678,12 +799,16 @@ nav.mean-nav > ul > li:first-child > a {
   color: #051922;
 }
 
+.dark-mode .top-header-area.sepherate-header ul li > a, .top-header-area.sepherate-header .header-icons a {
+  color: #000;
+}
+
 nav.main-menu ul ul.sub-menu li {
   display: block;
 }
 
 nav.main-menu ul ul.sub-menu li a {
-  color: #555;
+  color: #454545;
   padding: 8px;
   font-size: 13px;
   font-weight: 600;
@@ -934,6 +1059,11 @@ h2.widget-title:after {
 
 .copyright {
   background-color: #051922;
+  border-top: 1px solid #232a35;
+}
+
+.dark-mode .copyright {
+  background-color: #000000;
   border-top: 1px solid #232a35;
 }
 
@@ -1406,6 +1536,10 @@ html, body {
   font-size: 15px;
 }
 
+.dark-mode .hero-text p.subtitle {
+  color: #238ef2;
+}
+
 .hero-text h1 {
   font-size: 64px;
   font-weight: 700;
@@ -1633,10 +1767,29 @@ div.owl-controls, .owl-controls div {
   color: #051922;
 }
 
+.dark-mode .single-latest-news h3 a {
+  color: #e8e8e8;
+}
+
+.dark-mode .single-latest-news h3 a {
+  color: #E8E8E8;
+}
+
+.dark-mode p.blog-meta span {
+  color: #E8E8E8;
+}
+
 p.blog-meta span {
   margin-right: 15px;
   opacity: 0.6;
   color: #051922;
+  font-size: 0.85em;
+}
+
+.dark-mode .blog-meta span {
+  margin-right: 15px;
+  opacity: 0.6;
+  color: #E8E8E8;
   font-size: 0.85em;
 }
 
@@ -1651,6 +1804,11 @@ p.blog-meta span i {
 p.excerpt {
   line-height: 1.8;
   color: #555;
+}
+
+.dark-mode p.excerpt {
+  line-height: 1.8;
+  color: #F1F1F1;
 }
 
 .latest-news a.boxed-btn {
@@ -2017,6 +2175,10 @@ span.comment-date {
   opacity: 0.5;
 }
 
+.dark-mode .client-meta h3 span {
+  color: #FFFFFF;
+}
+
 p.testimonial-body {
   font-size: 17px;
   font-style: italic;
@@ -2340,6 +2502,12 @@ ul.social-link-team li a {
 #form_status span.loading {
   color: #333;
   background: #eee;
+  border-radius: 3px;
+  padding: 18px 0px;
+}
+#form_status .dark-mode .loading {
+  color: #878787;
+  background: #0F0F0F;
   border-radius: 3px;
   padding: 18px 0px;
 }
@@ -2755,3 +2923,77 @@ table.order-details tbody td {
   vertical-align: middle;
   width: 100%;
 }
+
+.img-container {
+  margin-top: 32px; /* Upravte hodnotu podle potřeby pro požadovanou mezeru */
+}
+
+.img {
+  width: 100%; /* Přizpůsobí obrázek šířce divu */
+}
+
+.dark-mode-switch-btn {
+  position: fixed; 
+  left: 15px;
+  bottom: 12px;
+  z-index: 900;
+  color: #238ef2;  
+  height: 32px;
+  width: 115px;
+  border: none;
+  border-radius: 30px; 
+  background: #000000;
+  font-size: 16px;
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.7s;
+}
+  .sparky {
+    font-size: 41px;
+    font-weight: bold;
+    @keyframes change {
+      0% {
+        color: red;    
+      }
+      20% {
+        color: orange;
+      }
+      40% {
+        color: yellow; 
+      }
+      60% {
+        color: green;   
+      }  
+      80% {
+        color: blue;
+      }
+      100% {
+        color: purple; 
+      }
+    }
+  }
+  
+  .sparky span {
+    animation: change 3s infinite;    
+  }
+  
+  @keyframes change {   
+    0% {
+      color: #238ef2;    
+    }
+    20% {
+      color: #3B8DD9;
+    }
+    40% {
+      color: skyblue; 
+    }
+    60% {
+      color: dodgerblue;   
+    }  
+    80% {
+      color: blueviolet;
+    }
+    100% {
+      color: cornflowerblue; 
+    /* Color steps */
+  }}
