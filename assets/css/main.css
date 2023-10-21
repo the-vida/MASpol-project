@@ -448,7 +448,7 @@ body {
 }
 
 .dark-mode h4 {
-  color: #238ef2;
+  color: #FFFFFF;
 }
 
 .dark-mode a:hover {
@@ -2350,6 +2350,10 @@ a.video-play-btn {
   background-image: url(../img/team/team-4.jpg);
 }
 
+.team-bg-5 {
+  background-image: url(../img/team/team-5.jpg);
+}
+
 .team-bg {
   height: 400px;
   background-size: cover;
@@ -2948,7 +2952,7 @@ table.order-details tbody td {
   transition: 0.7s;
 }
   .sparky {
-    font-size: 41px;
+    font-size: 34px;
     font-weight: bold;
     @keyframes change {
       0% {
