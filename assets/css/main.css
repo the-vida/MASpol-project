@@ -2977,7 +2977,7 @@ table.order-details tbody td {
   }
   
   .sparky span {
-    animation: change 3s infinite;    
+    animation: change 3.1s infinite;    
   }
   
   @keyframes change {   
