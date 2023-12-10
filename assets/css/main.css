@@ -2952,7 +2952,7 @@ table.order-details tbody td {
   transition: 0.7s;
 }
   .sparky {
-    font-size: 34px;
+    font-size: 38px;
     font-weight: bold;
     @keyframes change {
       0% {
